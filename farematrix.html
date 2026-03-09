@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Fare Matrix</title>
-</head>
-
-<body>
     <style>
         body {
-            background: url(https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/refs/heads/main/vroom.jpg
-) center center/cover no-repeat fixed;
+            background: url(https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/refs/heads/main/vroom.jpg) center center/cover no-repeat fixed;
         }
-
         .footer {
             position: fixed;
             left: 0;
@@ -27,111 +18,112 @@
             background-color: rgb(0, 45, 44);
             color: white;
             text-align: center;
+            padding: 10px 0;
         }
-
         .my-box {
-            background-color: rgb(182, 255, 251);
-            margin-left: 350px;
-            margin-right: 300px;
-            margin-top: 100px;
-            width: 800px;
-            height: 800px;
-
-            border: 15px cyan;
+            background-color: rgba(182, 255, 251, 0.9); /* Added transparency to see background */
+            margin: 50px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 15px;
+            border: 5px solid cyan;
+            text-align: center;
+        }
+        .matrix-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
     </style>
-    <nav class="navbar navbar-expand-sm" ; style="background-color: rgb(0, 255, 242);">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png
-" alt="Logo" height="35">
+            <a href="indexmain.html" class="navbar-brand">
+                <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png" alt="Logo" height="35">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="farematrix.html" style="font-weight: bold;">Fare Matrix</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help.html">Help</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="farematrix.html" style="font-weight: bold;">Fare Matrix</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
                 </ul>
-                <form class="d-flex">
-                    <a style="color: black;"
-                        href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1"
-                        target="_blank" ;>
-                        Book now!</a><br>
-                    <button class="btn btn-primary" type="button" style="background-color: orange;"
-                        onclick="document.location='registration.html'">Create
-                        Account</button>
-                </form>
+                <div class="d-flex align-items-center">
+                    <a style="color: black; margin-right: 15px;" href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1" target="_blank">Book now!</a>
+                    <button class="btn btn-warning" type="button" onclick="document.location='registration.html'">Create Account</button>
+                </div>
             </div>
         </div>
     </nav>
 
     <div class="my-box">
         <h1 style="font-family: monospace;">eSakayMo Fare Matrix</h1>
-        <form style="text-align: center;">
-            <img src="file:///C:/Users/User/Pictures/Screenshots/rooseveltobaclaran.png"
-                style="margin-top: 5px; margin-left: 50px; size: 50px; border-radius: 5;" ;>
-
+        <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/refs/heads/main/rooseveltobaclaran.png" class="matrix-img" alt="Route Map">
+        
+        <div class="p-3">
             <label>From:</label>
-            <select style="border-radius: 10px;" id="pickup"></select>
+            <select class="form-select d-inline-block w-auto" id="pickup"></select>
 
-            <label>To:</label>
-            <select style="border-radius: 10px;" id="dropoff"></select>
+            <label class="ms-2">To:</label>
+            <select class="form-select d-inline-block w-auto" id="dropoff"></select>
 
-            <label>Whose traveling?</label>
-            <select style="border-radius: 10px;" id="passenger"></select>
+            <div class="mt-3">
+                <label>Passenger Type:</label>
+                <select class="form-select d-inline-block w-auto" id="passengerType">
+                    <option value="1">Regular</option>
+                    <option value="0.8">Student / Senior / PWD (20% off)</option>
+                </select>
+            </div>
 
-            <select id="passenger">
-                <option value="regularfare">Regular</option>
-                <option value="discountedfare">Student / Senior / PWD (20%)</option>
-            </select><br>
-
-            <button class="btn btn-primary" style="border-color: aquamarine;" onclick="calculateFare()"> Calculate
-                Fare</button>
-
-            <h3 style="font-family: monospace;" id="result"></h3>
-
-            <script>
-
-                const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.",
-                    "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"
-
-                ];
-
-                const basefare = 50;
-                const baseKM = 3;
-                const perKMrate = 2;
-
-                const fromSelect = document.getElementById("pickup");
-                const toSelect = document.getElementById("dropoff");
-
-            </script>
-
-
-
-
-
-            <script src="mainproject.js"></script>
+            <button class="btn btn-info mt-4" onclick="calculateFare()">Calculate Fare</button>
+            <h3 class="mt-4" style="font-family: monospace;" id="result"></h3>
+        </div>
     </div>
-    </form><br>
+
     <div class="footer">
-        <p style="font-family: monospace;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
+        <p style="font-family: monospace; margin: 0;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
     </div>
-</body>
 
+    <script>
+        const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.", "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"];
+
+        const fromSelect = document.getElementById("pickup");
+        const toSelect = document.getElementById("dropoff");
+
+        // Populate the dropdowns automatically
+        stations.forEach((station, index) => {
+            let option1 = new Option(station, index);
+            let option2 = new Option(station, index);
+            fromSelect.add(option1);
+            toSelect.add(option2);
+        });
+
+        function calculateFare() {
+            const startIdx = parseInt(fromSelect.value);
+            const endIdx = parseInt(toSelect.value);
+            const discount = parseFloat(document.getElementById("passengerType").value);
+            
+            // Calculate number of stations traveled
+            const distance = Math.abs(endIdx - startIdx);
+            
+            if (distance === 0) {
+                document.getElementById("result").innerHTML = "Please select different stations.";
+                return;
+            }
+
+            // Simple Fare Logic: Base fare 15 + 2 per station (Adjust as needed)
+            let totalFare = 15 + (distance * 2);
+            let discountedFare = totalFare * discount;
+
+            document.getElementById("result").innerHTML = `Total Fare: ₱${discountedFare.toFixed(2)}`;
+        }
+    </script>
+</body>
 </html>
 
