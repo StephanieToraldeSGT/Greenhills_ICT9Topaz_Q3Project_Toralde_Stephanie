@@ -40,91 +40,77 @@
             border: 15px cyan;
         }
     </style>
-    <nav class="navbar navbar-expand-sm" ; style="background-color: rgb(0, 255, 242);">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand">
-                <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png
-alt="Logo" height="35">
+                <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png" alt="Logo" height="35">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="farematrix.html">Fare Matrix</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help.html">Help</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="farematrix.html">Fare Matrix</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
                 </ul>
-                <form class="d-flex">
-                    <a style="color: black;"
-                        href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1"
-                        target="_blank" ;>
-                        Book now!</a><br>
-                    <button class="btn btn-primary" type="button" style="background-color: orange;"
-                        onclick="document.location='registration.html'">Create
-                        Account</button>
-                </form>
+                <div class="d-flex align-items-center">
+                    <a style="color: black; margin-right: 15px;" href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1" target="_blank">Book now!</a>
+                    <button class="btn" style="background-color: orange;" onclick="location.href='registration.html'">Create Account</button>
+                </div>
             </div>
         </div>
     </nav>
 
-
     <div class="my-registration">
-        <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/refs/heads/main/defaultpfp.png" onclick="to_upload()"
-            style=" margin-top: 5px; size: 120px;"><br>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <h4 style="font-family: monospace; margin-top: 10px;">Profile picture</h4>
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" onclick="upload_image()" id="submit">
-        </form>
-        <form>
-            <h4 style="font-family: monospace; margin-top: 10px;">Registration</h4>
-            <p>Please fill out all required fields in the registration form with accurate information. Once
-                completed, review your details and click submit to finish your registration.</p>
+        <div class="text-center">
+            <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/refs/heads/main/defaultpfp.png" style="width: 100px; border-radius: 50%;">
+            <form action="upload.php" method="post" enctype="multipart/form-data" class="mt-2">
+                <h6>Profile Picture</h6>
+                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control form-control-sm">
+                <button type="submit" class="btn btn-sm btn-secondary mt-2">Upload Image</button>
+            </form>
+        </div>
 
-            <h6>First Name </h6>
-            <input type="textbox" style="max-width: 160px;" placeholder="John" class="form-control">
+        <hr>
+
+        <form id="regForm">
+            <h4 style="font-family: monospace;">Registration</h4>
+            <p><small>Please fill out all required fields accurately.</small></p>
+
+            <h6>First Name</h6>
+            <input type="text" id="firstname" placeholder="John" class="form-control mb-2">
+
             <h6>Last Name</h6>
-            <input type="textbox" style="max-width: 160px;" placeholder="Doe" class="form-control">
+            <input type="text" id="lastname" placeholder="Doe" class="form-control mb-2">
+
             <h6>Age</h6>
-            <input type="textbox" style="max-width: 50px;" placeholder="21" class="form-control">
-            <h6>Contact Number</h6>
-            <input type="textbox" style="max-width: 160px;" placeholder="+XXX-XXX-XXX" class="form-control">
+            <input type="number" id="age" placeholder="21" class="form-control mb-2" style="max-width: 80px;">
+
             <h6>Email Address</h6>
-            <input type="textbox" style="max-width: 250px;" placeholder="john.doe@gmail.com" class="form-control">
-            <h6> Enter your username</h6>
-            <input type="textbox" style="max-width: 250px;" placeholder="johnthecoolestguyeva2000" class="form-control">
-            <h6>Enter your password</h6>
-            <input type="textbox" style="max-width: 160px;" placeholder="********" class="form-control">
-            <label><input type="checkbox" value=""> I accept the Terms of Use and Privacy Policy<br>
-                <img src="file:///C:/Users/User/Pictures/Screenshots/Money-Back%20Ride.png" alt="Logo" height="35"><br>
-                <button class="btn btn-primary" type="button" onclick="to_register()" style="background-color: orange;"
-                    onclick="document.location='confirmation.html'">Submit</button>
-                <button class="btn btn-primary" type="button" style="background-color: orange;"
-                    onclick="document.location='registration.html'">Cancel</button>
+            <input type="email" id="email" placeholder="john.doe@gmail.com" class="form-control mb-2">
 
-                <script src="skillstest.js"></script>
+            <label class="mb-3">
+                <input type="checkbox" id="terms"> I accept the Terms of Use and Privacy Policy
+            </label>
 
-
+            <div class="d-flex gap-2">
+                <button class="btn" type="button" onclick="to_register()" style="background-color: orange;">Submit</button>
+                <button class="btn btn-secondary" type="reset">Cancel</button>
+            </div>
         </form>
     </div>
-    <div class="footer">
-        <p style="font-family: monospace;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
-    </div>
-</body>
 
+    <div class="footer">
+        <p style="font-family: monospace; margin: 0;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
 </html>
+
+
 
