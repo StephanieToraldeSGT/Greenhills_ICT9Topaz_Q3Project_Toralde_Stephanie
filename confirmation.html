@@ -15,23 +15,35 @@
 <body>
     <style>
         body {
-            background: url(https://cdn.pixabay.com/photo/2014/07/14/22/06/highway-393492_1280.jpg) center center/cover no-repeat fixed;
+            background: url(file:///C:/Users/User/Downloads/vroom.jpg) center center/cover no-repeat fixed;
         }
 
-        h1 {
-            font-family: monospace;
-            color: rgb(36, 76, 75);
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(0, 45, 44);
+            color: white;
             text-align: center;
         }
 
-        h6 {
-            text-align: center;
-            background-color: rgb(2, 2, 72);
-            color: aliceblue;
+        .my-box {
+            background-color: rgb(182, 255, 251);
+            margin-left: 350px;
+            margin-right: 300px;
+            margin-top: 100px;
+            width: 800px;
+            height: 280px;
+            border-radius: 15px;
+            border: 15px cyan;
         }
     </style>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm" ; style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="file:///C:/Users/User/Pictures/Screenshots/Money-Back%20Ride.png" alt="Logo" height="35">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +53,8 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="indexmain.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="farematrix.html">Fare Matrix</a>
                     </li>
@@ -53,20 +66,25 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <form class="d-flex">
-                        <a
-                            href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1">
-                            Book now!</a><br>
-                        <button class="btn btn-primary" type="button">Create Account</button>
-                    </form>
+                    <a style="color: black;"
+                        href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1"
+                        target="_blank" ;>
+                        Book now!</a><br>
+                    <button class="btn btn-primary" type="button" style="background-color: orange;"
+                        onclick="document.location='registration.html'">Create
+                        Account</button>
+                </form>
             </div>
         </div>
     </nav>
 
-    <div class="container bg-white bg-opacity-56 p-4 p-md-4 rounded mx-auto">
-        <h1>You're all set!</h1>
+    <div class="my-box">
+        <h1 style="text-align: center; font-family: monospace;">You're all set!</h1>
         <p style="text-align: center;">We gotchu dudes..</p>
     </div><br>
-    <h6>Liam Tiong & Stephanie Toralde | 9 Topaz</h6>
+    <div class="footer">
+        <p style="font-family: monospace;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
+    </div>
 </body>
-<html>
+
+</html>
