@@ -15,25 +15,34 @@
 <body>
     <style>
         body {
-            background: url(https://cdn.pixabay.com/photo/2014/07/14/22/06/highway-393492_1280.jpg) center center/cover no-repeat fixed;
+            background: url(file:///C:/Users/User/Downloads/vroom.jpg) center center/cover no-repeat fixed;
         }
 
-        h1 {
-            font-family: monospace;
-            color: rgb(36, 76, 75);
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(0, 45, 44);
+            color: white;
             text-align: center;
         }
 
-        h6 {
-            text-align: center;
-            background-color: rgb(2, 2, 72);
-            color: aliceblue;
+        .my-box {
+            background-color: rgb(182, 255, 251);
+            margin-left: 350px;
+            margin-right: 300px;
+            margin-top: 100px;
+            width: 800px;
+            height: 280px;
+            border-radius: 25px;
+            border: 15px cyan;
         }
     </style>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm" ; style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
-            <a href="indexmain.html" class="navbar-brand">
-                <img src="eSakayMo.png" alt="Logo" href="index.html" height="40">
+            <a href="index.html" class="navbar-brand">
+                <img src="file:///C:/Users/User/Pictures/Screenshots/Money-Back%20Ride.png" alt="Logo" height="35">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -44,56 +53,41 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html" style="font-weight: bold;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Fare Matrix</a>
+                        <a class="nav-link" href="farematrix.html">Fare Matrix</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Schedule</a>
+                        <a class="nav-link" href="schedule.html">Schedule</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Help</a>
+                        <a class="nav-link" href="help.html">Help</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <a href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1">
-                        book now!</a><br>
-                    <button class="btn btn-primary" href="registration.html" type="button">Create Account</button>
+                    <a style="color: black;"
+                        href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1"
+                        target="_blank" ;>
+                        Book now!</a><br>
+                    <button class="btn btn-primary" type="button" style="background-color: orange;"
+                        onclick="document.location='registration.html'">Create
+                        Account</button>
                 </form>
             </div>
         </div>
     </nav>
-
-    <div class="container mb-5 bg-white bg-opacity-56 p-4 p-md-4 rounded mx-auto">
-        <img style="size: 120px" src="eSakayMo.png">
-        <h1>Welcome to eSakayMo Fare Guide!</h1>
-        <h5 style="text-align: center; font-family: 'monospace';"> The site is underdeveloped, so please bear with the lacking elements. </h5>
+    <div class="my-box">
+        <img style="width: 100px; height: 100px; margin-left: 350px; margin-right: 300px; margin-top: 30px;"
+            class="center" ; src="file:///C:/Users/User/Pictures/Screenshots/Money-Back%20Ride.png">
+        <h1 style="text-align: center; font-family: monospace;">Welcome to the Money-Back Ride Fare Guide!</h1>
+        <h5 style="text-align: center; font-family: monospace;"> The site is pretty underdeveloped, so please bear
+            with us. </h5>
     </div>
 
-    <div class="container mb-5 bg-white bg-opacity-56 p-4 p-md-4 rounded  mx-auto">
-        <h1>eSakayMo Fare Matrix</h1>
-        <form style="text-align: center;">
-            <img src="c:\Users\User\Pictures\Screenshots\Screenshot 2026-03-01 183241.png"
-                style="width: 250px; height: 250px;">
-
-            <input id="basefare" placeholder="Roosevelt">
-
-            <input id="baseKM" placeholder="Baclaran"><br>
-
-            <input type="button" onclick="compute_regular()" value="Regular Fare">
-            <input type="button" onclick="compute_discounted()" value="Discounted Fare">
-
-            <h1>Fare:</h1>
-            <div id="output1" style="font-family:'monospace'; font-weight: bold;"></div>
-            <div id="output2" style="font-family:'monospace'; font-weight: bold;"></div>
-            <script src="proj.js"></script>
+    <div class="footer">
+        <p style="font-family: monospace;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
     </div>
-    </form><br>
-    <h6>Liam Tiong & Stephanie Toralde | 9 Topaz</h6>
 </body>
 
 </html>
-
-
-
