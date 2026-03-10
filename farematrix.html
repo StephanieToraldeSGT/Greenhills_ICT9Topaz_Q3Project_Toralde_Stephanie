@@ -91,11 +91,6 @@
     </div>
 
     <script>
-
-        basefare: 50;
-        baseKM: 2;
-        let perKMrate = basefare / baseKM;
-        let totaldistance = 20;
         
         const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.", "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"];
 
@@ -108,9 +103,17 @@
             let option2 = new Option(station, index);
             fromSelect.add(option1);
             toSelect.add(option2);
-        });
-
+        }); 
+        
         function calculateFare() {
+        
+        basefare: 50;
+        baseKM: 2;
+ 
+            
+        let perKMrate = basefare / baseKM;
+        let totaldistance = 20;
+
             const startIdx = parseInt(fromSelect.value);
             const endIdx = parseInt(toSelect.value);
             const discount = parseFloat(document.getElementById("passengerType").value);
@@ -132,5 +135,6 @@
     </script>
 </body>
 </html>
+
 
 
