@@ -21,7 +21,7 @@
             padding: 10px 0;
         }
         .my-box {
-            background-color: rgba(182, 255, 251, 0.9); /* Added transparency to see background */
+            background-color: rgba(182, 255, 251, 0.9);
             margin: 50px auto;
             padding: 30px;
             width: 90%;
@@ -97,7 +97,6 @@
         const fromSelect = document.getElementById("pickup");
         const toSelect = document.getElementById("dropoff");
 
-        // Populate the dropdowns automatically
         stations.forEach((station, index) => {
             let option1 = new Option(station, index);
             let option2 = new Option(station, index);
@@ -109,16 +108,15 @@
         
         basefare: 50;
         baseKM: 2;
- 
+      totaldistance = 20;
             
         let perKMrate = basefare / baseKM;
-        let totaldistance = 20;
+       
 
             const startIdx = parseInt(fromSelect.value);
             const endIdx = parseInt(toSelect.value);
             const discount = parseFloat(document.getElementById("passengerType").value);
             
-            // Calculate number of stations traveled
             const distance = Math.abs(endIdx - startIdx);
             
             if (distance === 0) {
@@ -126,15 +124,15 @@
                 return;
             }
 
-            // Simple Fare Logic: Base fare 15 + 2 per station (Adjust as needed)
-            let totalFare = totaldistance * perKMrate (distance * 2);
+            let totalFare = totaldistance * perKMrate + (distance * 2);
             let discountedFare = totalFare * discount;
 
-            document.getElementById("result").innerHTML = `Total Fare: ₱${discountedFare.toFixed(2)}`;
+            document.getElementById("result").innerHTML = 'Total Fare: ₱${discountedFare.toFixed(2)}`;
         }
     </script>
 </body>
 </html>
+
 
 
 
