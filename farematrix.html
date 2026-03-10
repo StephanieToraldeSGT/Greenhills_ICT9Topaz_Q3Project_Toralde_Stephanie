@@ -41,7 +41,7 @@
 <body>
     <nav class="navbar navbar-expand-sm" style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
-            <a href="indexmain.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png" alt="Logo" height="35">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -91,6 +91,12 @@
     </div>
 
     <script>
+
+        basefare: 50;
+        baseKM: 2;
+        let perKMrate = basefare / baseKM;
+        let totaldistance = 20;
+        
         const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.", "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"];
 
         const fromSelect = document.getElementById("pickup");
@@ -118,7 +124,7 @@
             }
 
             // Simple Fare Logic: Base fare 15 + 2 per station (Adjust as needed)
-            let totalFare = 15 + (distance * 2);
+            let totalFare = totaldistance * perKMrate (distance * 2);
             let discountedFare = totalFare * discount;
 
             document.getElementById("result").innerHTML = `Total Fare: ₱${discountedFare.toFixed(2)}`;
@@ -126,4 +132,5 @@
     </script>
 </body>
 </html>
+
 
