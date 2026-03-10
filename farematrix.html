@@ -90,7 +90,8 @@
         <p style="font-family: monospace; margin: 0;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
     </div>
 
-     <script>
+     <script>        
+        function calculateFare() {
         const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.", "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"];
 
         const fromSelect = document.getElementById("pickup");
@@ -104,7 +105,7 @@
             toSelect.add(option2);
         });
 
-        function calculateFare() {
+
             const startIdx = parseInt(fromSelect.value);
             const endIdx = parseInt(toSelect.value);
             const discount = parseFloat(document.getElementById("passengerType").value);
@@ -126,3 +127,4 @@
     </script>
 </body>
 </html>
+
