@@ -21,7 +21,7 @@
             padding: 10px 0;
         }
         .my-box {
-            background-color: rgba(182, 255, 251, 0.9); 
+            background-color: rgba(182, 255, 251, 0.9); /* Added transparency to see background */
             margin: 50px auto;
             padding: 30px;
             width: 90%;
@@ -56,7 +56,7 @@
                 </ul>
                 <div class="d-flex align-items-center">
                     <a style="color: black; margin-right: 15px;" href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1" target="_blank">Book now!</a>
-                    <button class="btn btn-primary" style="background-color: orange; color: white;" type="button" onclick="document.location='registration.html'">Create Account</button>
+                    <button class="btn btn-warning" type="button" onclick="document.location='registration.html'">Create Account</button>
                 </div>
             </div>
         </div>
@@ -96,6 +96,7 @@
         const fromSelect = document.getElementById("pickup");
         const toSelect = document.getElementById("dropoff");
 
+        // Populate the dropdowns automatically
         stations.forEach((station, index) => {
             let option1 = new Option(station, index);
             let option2 = new Option(station, index);
@@ -108,6 +109,7 @@
             const endIdx = parseInt(toSelect.value);
             const discount = parseFloat(document.getElementById("passengerType").value);
             
+            // Calculate number of stations traveled
             const  = Math.abs(endIdx - startIdx);
             
             if (distance === 0) {
@@ -115,6 +117,7 @@
                 return;
             }
 
+            // Simple Fare Logic: Base fare 50 + 2 per station
             let totalFare = 50 + (distance * 2);
             let discountedFare = totalFare * discount;
 
