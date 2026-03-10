@@ -21,7 +21,7 @@
             padding: 10px 0;
         }
         .my-box {
-            background-color: rgba(182, 255, 251, 0.9);
+            background-color: rgba(182, 255, 251, 0.9); 
             margin: 50px auto;
             padding: 30px;
             width: 90%;
@@ -41,7 +41,7 @@
 <body>
     <nav class="navbar navbar-expand-sm" style="background-color: rgb(0, 255, 242);">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
+            <a href="indexmain.html" class="navbar-brand">
                 <img src="https://raw.githubusercontent.com/StephanieToraldeSGT/Greenhills_ICT9Topaz_Q3Project_Toralde_Stephanie/316467b9a3008821fd0a8b3d495cdc9b7982f8d6/Money-Back%20Ride.png" alt="Logo" height="35">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -56,7 +56,7 @@
                 </ul>
                 <div class="d-flex align-items-center">
                     <a style="color: black; margin-right: 15px;" href="https://www.rome2rio.com/s/Fernando-Poe-Jr-Station/Baclaran-Terminal-Station-LRT-Line-1" target="_blank">Book now!</a>
-                    <button class="btn btn-warning" style="color: white;" type="button" onclick="document.location='registration.html'">Create Account</button>
+                    <button class="btn btn-primary" style="background-color: orange; color: white;" type="button" onclick="document.location='registration.html'">Create Account</button>
                 </div>
             </div>
         </div>
@@ -90,14 +90,12 @@
         <p style="font-family: monospace; margin: 0;">Stephanie Toralde & Liam Tiong | 9-Topaz @ OBMC Greenhills 2025-2026</p>
     </div>
 
-     <script>        
-        function calculateFare() {
+    <script>
         const stations = ["Roosevelt", "Balintawak", "Monumento", "5th Ave.", "R. Papa", "Abad Santos", "Blumentritt", "Tayuman", "Bambang", "Doroteo Jose", "Carriedo", "Central Terminal", "United Nations", "Pedro Gil", "Quirino", "Vito Cruz", "Gil Puyat", "Libertad", "EDSA", "Baclaran"];
 
         const fromSelect = document.getElementById("pickup");
         const toSelect = document.getElementById("dropoff");
 
-        // Populate the dropdowns automatically
         stations.forEach((station, index) => {
             let option1 = new Option(station, index);
             let option2 = new Option(station, index);
@@ -105,12 +103,11 @@
             toSelect.add(option2);
         });
 
-
+        function calculateFare() {
             const startIdx = parseInt(fromSelect.value);
             const endIdx = parseInt(toSelect.value);
             const discount = parseFloat(document.getElementById("passengerType").value);
             
-            // Calculate number of stations traveled
             const  = Math.abs(endIdx - startIdx);
             
             if (distance === 0) {
@@ -118,7 +115,6 @@
                 return;
             }
 
-            // Simple Fare Logic: Base fare 50 + 2 per station
             let totalFare = 50 + (distance * 2);
             let discountedFare = totalFare * discount;
 
@@ -127,5 +123,4 @@
     </script>
 </body>
 </html>
-
 
